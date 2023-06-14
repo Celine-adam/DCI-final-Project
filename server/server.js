@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import passport from "passport";
 import { configureJwtStrategy } from "./routes/passport-config.js";
 import userRoutes from "./routes/userRoutes.js";
+import commentRoutes from "./routes/commentRoutes.js";
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ mongoose
   });
 
 app.use("/api/user", userRoutes);
+app.use("/api/comment", commentRoutes);
 
 app.all("*", (req, res) => {
   return res.status(StatusCodes.NOT_FOUND).json({ message: "Invalid path" });
