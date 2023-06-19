@@ -7,9 +7,9 @@ import {
   rating,
 } from "../controllers/commentController.js";
 const router = express.Router();
-router.get("/owner/comment/list", OwnerListComment),
-  router.delete("/owner/comment/:id", deleteCommentById),
-  router.post("/user/comment/create", createComment),
-  router.get("/user/comment/list", ListComment),
-  router.get("user/comment/rating", rating);
+router.get("/owner/list", OwnerListComment),
+  router.delete("/owner/:id", deleteCommentById),
+  router.post("/user/create", createComment),
+  router.get("/user/list", ListComment),
+  router.get("user/rating", rating);
 export default router;
