@@ -1,7 +1,7 @@
 import express from "express";
 import {
   createPost,
-  deletePostId,
+  deletePostById,
   ListPost,
   OwnerListPost,
 } from "../controllers/postController.js";
@@ -9,8 +9,9 @@ import {
 const router = express.Router();
 
 router.get("/owner/list", OwnerListPost),
-  router.delete("/owner/:id", deletePostId),
+  router.delete("/owner/delete/:id", deletePostById),
   router.post("/owner/create", createPost),
   router.get("/user/list", ListPost);
+router.patch("/owner/update/:id");
 
 export default router;

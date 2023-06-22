@@ -68,7 +68,7 @@ export const deleteCommentById = async (req, res) => {
 
     return res
       .status(StatusCodes.OK)
-      .json({ message: "comment deleted", deletedUser: user });
+      .json({ message: "comment deleted", deletedUser: comment });
   } catch (error) {
     return res
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
@@ -79,7 +79,7 @@ export const deleteCommentById = async (req, res) => {
 export const rating = async (req, res) => {
   try {
     // Fetch all comments from the database
-    const comments = await Comment.findAll();
+    const comments = await Comment.find();
 
     // Calculate the average rating
     const totalRatings = comments.reduce(
