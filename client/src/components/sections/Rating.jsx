@@ -1,6 +1,6 @@
 
 export default function Rating() {
   return (
-    <div>Rating</div>
+    <div className="page-section">Rating</div>
   )
 }

@@ -1,6 +1,6 @@
 
 export default function Hero() {
   return (
-    <div>Hero</div>
+    <div className="page-section">Hero</div>
   )
 }

@@ -1,6 +1,6 @@
 
 export default function Podcasts() {
   return (
-    <div>Podcasts</div>
+    <div className="page-section">Podcasts</div>
   )
 }

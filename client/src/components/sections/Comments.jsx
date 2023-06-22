@@ -1,6 +1,6 @@
 
 export default function Comments() {
   return (
-    <div>Comments</div>
+    <div className="page-section">Comments</div>
   )
 }
